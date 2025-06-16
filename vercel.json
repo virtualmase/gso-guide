@@ -1,0 +1,19 @@
+{
+  "builds": [
+    {
+      "src": "Gemfile",
+      "use": "@vercel/ruby",
+      "config": {
+        "installCommand": "bundle install",
+        "buildCommand": "bundle exec jekyll build",
+        "outputDirectory": "_site"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/_site/$1"
+    }
+  ]
+}
