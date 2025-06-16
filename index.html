@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generative Search Optimization Guide</title>
+  <!-- Schema.org JSON-LD for GSO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Generative Search Optimization Guide",
+    "author": {
+      "@type": "Person",
+      "name": "Mason Nguyen",
+      "url": "https://masonnguyen.com/about"
+    },
+    "datePublished": "2025-06-16",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Mason Nguyen Consulting"
+    }
+  }
+  </script>
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #1C2526; color: #FFFFFF; }
+    canvas { max-width: 100%; }
+    img { max-width: 100%; height: auto; }
+  </style>
+</head>
+<body>
+  <!-- Markdown content will be rendered here by Jekyll -->
+  <div id="content"></div>
+  <!-- Chart 1: AI Citation Rates -->
+  <canvas id="citationChart"></canvas>
+  <script>
+    const ctx1 = document.getElementById('citationChart').getContext('2d');
+    new Chart(ctx1, {
+      type: 'bar',
+      data: {
+        labels: ['Before GSO', 'After GSO'],
+        datasets: [{
+          label: 'AI Citation Rate (%)',
+          data: [10, 35],
+          backgroundColor: ['#FF6B6B', '#00FF7F'],
+          borderColor: ['#FF4500', '#00B7EB'],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: { beginAtZero: true, max: 40, title: { display: true, text: 'Citation Rate (%)', color: '#FFFFFF' }, ticks: { color: '#FFFFFF' } },
+          x: { title: { display: true, text: 'GSO Implementation', color: '#FFFFFF' }, ticks: { color: '#FFFFFF' } }
+        },
+        plugins: { legend: { labels: { color: '#FFFFFF' } }, title: { display: true, text: 'GSO Boosts AI Citations', color: '#FFFFFF', font: { size: 16 } } }
+      }
+    });
+  </script>
+  <!-- Chart 2: Organic Traffic Growth -->
+  <canvas id="trafficChart"></canvas>
+  <script>
+    const ctx2 = document.getElementById('trafficChart').getContext('2d');
+    new Chart(ctx2, {
+      type: 'line',
+      data: {
+        labels: ['Before GSO', 'After GSO'],
+        datasets: [{
+          label: 'Monthly Organic Traffic',
+          data: [5000, 7000],
+          borderColor: '#00FF7F',
+          backgroundColor: '#00FF7F',
+          pointBackgroundColor: '#00FF7F',
+          pointBorderColor: '#FFFFFF',
+          fill: false,
+          tension: 0.3
+        }]
+      },
+      options: {
+        scales: {
+          y: { beginAtZero: true, max: 8000, title: { display: true, text: 'Organic Traffic (Visits)', color: '#FFFFFF' }, ticks: { color: '#FFFFFF' } },
+          x: { title: { display: true, text: 'GSO Implementation', color: '#FFFFFF' }, ticks: { color: '#FFFFFF' } }
+        },
+        plugins: { legend: { labels: { color: '#FFFFFF' } }, title: { display: true, text: 'Traffic Growth with GSO', color: '#FFFFFF', font: { size: 16 } } }
+      }
+    });
+  </script>
+</body>
+</html>
