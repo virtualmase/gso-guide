@@ -2,7 +2,7 @@ title: GSO Step-by-Step Guide
 description: A beginner-friendly guide to Generative Search Optimization
 theme: just-the-docs
 baseurl: "/gso-guide"
-url: "https://gso-guide.netlify.app/"
+url: "https://gso-guide.vercel.app/"
 permalink: pretty
 plugins:
   - jekyll-seo-tag
